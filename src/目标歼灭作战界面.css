@@ -1,0 +1,151 @@
+
+.目标歼灭作战界面 {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.目标阶段-列表 {
+  overflow: auto;
+  flex: none;
+  height: 100%;
+  padding-right: 3em;
+}
+
+.目标阶段-选项 {
+  color: #fff;
+  display: block;
+  background-color: rgba(9, 109, 217, 0.3);
+  background-clip: padding-box;
+  padding: 1em;
+  border: 2px solid transparent;
+  border-right-width: 4px;
+  margin: 0.5em 0;
+  min-width: 8em;
+  min-height: 4em;
+  border-image: none;
+  box-shadow: none;
+  position: relative;
+  cursor: pointer;
+}
+
+.目标阶段-选项::after {
+  top: 0;
+  right: -4px;
+  width: 4px;
+  height: 100%;
+  position: absolute;
+  content: '';
+  background-image: linear-gradient(to right, rgba(9, 109, 217, 0.4), rgba(9, 109, 217, 0));
+}
+
+.目标阶段-选项箭头 {
+  top: 50%;
+  right: -1em;
+  opacity: 0;
+  position: absolute;
+  transition: all 0.2s;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+}
+
+.目标阶段-选项:hover,
+.目标阶段-选项.已选中 {
+  border-image: linear-gradient(to right, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 1)) 10;
+}
+
+.目标阶段-选项:hover::after,
+.目标阶段-选项.已选中::after {
+  display: none;
+}
+
+.目标阶段-选项.已选中 .目标阶段-选项箭头 {
+  opacity: 1;
+  right: -1.75rem;
+}
+
+.目标阶段-选项.已选中 .目标阶段-选项箭头::before {
+  right: -0.5em;
+  z-index: 1;
+  content: '';
+  position: relative;
+  border: 0.75em solid #fff;
+  border-left-color: transparent;
+  border-top-color: transparent;
+  transform: rotate(-45deg);
+  display: inline-block;
+}
+
+.目标阶段-选项.已选中 .目标阶段-选项箭头::after {
+  z-index: 0;
+  content: '';
+  position: relative;
+  border: 0.55em solid rgba(255, 255, 255, 0.4);
+  border-left-color: transparent;
+  border-top-color: transparent;
+  transform: rotate(-45deg);
+  display: inline-block;
+}
+
+.目标展示区 {
+  flex: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.目标信息面板 {
+  color: #fff;
+  flex: none;
+  width: 13.5em;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+}
+
+.目标信息面板-标题 {
+  text-align: right;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8));
+  padding-right: 0.5rem;
+  margin-right: -0.5rem;
+}
+
+.目标信息面板-小标题 {
+  font-size: small;
+  margin: 1rem 0;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2));
+  padding-right: 0.5rem;
+  margin-right: -0.5rem;
+}
+
+.目标信息面板-描述 {
+  font-size: small;
+}
+
+.目标信息面板-报酬 {
+  flex: auto;
+  display: flex;
+  min-height: 0;
+  margin-bottom: 1em;
+  flex-direction: column;
+}
+
+.目标信息面板-报酬列表 {
+  flex: auto;
+}
+
+.目标信息面板-操作 {
+  margin-top: auto;
+  text-align: right;
+}
+
+.目标信息面板-操作 .按钮 {
+  margin-top: 0.25em;
+  width: 100%;
+  max-width: 10em;
+}

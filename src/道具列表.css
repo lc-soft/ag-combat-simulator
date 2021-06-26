@@ -1,0 +1,12 @@
+.道具列表 {
+  overflow: hidden;
+}
+
+.道具列表-内部 {
+  margin-right: -0.25em;
+}
+
+.道具列表 .道具 {
+  margin-right: 0.25em;
+  margin-bottom: 0.25em;
+}

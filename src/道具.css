@@ -1,0 +1,27 @@
+.道具 {
+  display: inline-block;
+}
+
+.道具星级 {
+  display: flex;
+  justify-content: center;
+}
+
+.道具星级 .星星 {
+  font-size: small;
+  margin-right: -2px;
+}
+
+.道具星级 .星星.紫色 {
+  color: #ffadd2;
+}
+
+.道具星级 .星星.金色 {
+  color: #ffec3d;
+}
+
+.道具星级 .星星::before {
+  content: '★';
+  display: flex;
+  transform: rotate(15deg);
+}

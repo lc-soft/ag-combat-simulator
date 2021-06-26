@@ -1,0 +1,42 @@
+body {
+  background: #e6f7ff;
+  background-image: url('assets/bg.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+html, body {
+  height: 100%;
+  line-height: 1.5;
+}
+
+.容器 {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.界面 {
+  width: 100%;
+  max-width: 1000px;
+  max-height: 600px;
+  padding: 1rem;
+}
+
+.按钮 {
+  padding: 0.5em 1.5em;
+  background: #1890ff;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+}
+
+.按钮:hover {
+  background: #40a9ff;
+}
+
+.按钮:active {
+  background: #096dd9;
+}
