@@ -2,7 +2,7 @@
   width: 4em;
   height: 4em;
   padding: 1px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(180, 180, 180, 0.5);
   display: inline-block;
   position: relative;
 }
@@ -45,4 +45,41 @@
   align-content: center;
   justify-content: center;
   position: absolute;
+  font-size: small;
+}
+
+.道具缩略图-图标 {
+  flex: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.道具星级 {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  border-bottom: 1px solid #eee;
+}
+
+.道具星级 .星星 {
+  font-size: small;
+  margin-right: -2px;
+}
+
+.道具星级 .星星.紫色 {
+  color: #ffadd2;
+}
+
+.道具星级 .星星.金色 {
+  color: #ffec3d;
+}
+
+.道具星级 .星星::before {
+  content: '★';
+  display: flex;
+  transform: rotate(15deg);
 }

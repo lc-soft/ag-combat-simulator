@@ -12,7 +12,7 @@
   overflow: auto;
   flex: none;
   height: 100%;
-  padding-right: 3em;
+  padding-right: 2em;
 }
 
 .目标阶段-选项 {
@@ -93,9 +93,7 @@
 
 .目标展示区 {
   flex: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 100%;
 }
 
 .目标信息面板 {
@@ -148,4 +146,21 @@
   margin-top: 0.25em;
   width: 100%;
   max-width: 10em;
+}
+
+.作战结果界面 {
+  color: #fff;
+  display: flex;
+  padding: 1em;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.2);
+  height: 100%;
+}
+
+.作战结果界面 h3 {
+  margin-top: 0;
+}
+
+.作战报酬列表 {
+  flex: auto;
 }

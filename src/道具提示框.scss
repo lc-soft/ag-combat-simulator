@@ -1,0 +1,74 @@
+.道具提示框 {
+  font-size: small;
+  background: #fff;
+  max-width: 15rem;
+}
+
+.装备信息-头部 {
+  position: relative;
+}
+
+.装备信息-头部 .道具缩略图 {
+  top: 0.75rem;
+  left: 0.5rem;
+  position: absolute;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.装备信息-主体 {
+  padding: 0 0.5rem 0.5rem 0.5rem;
+}
+
+.装备信息-名称 {
+  color: #fff;
+  background: #1f1f1f;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-bottom: 2px solid #eee;
+}
+
+.装备信息-厂商 {
+  color: #2f54eb;
+}
+
+.装备信息-名称,
+.装备信息-分类,
+.装备信息-厂商 {
+  padding-left: 5rem;
+}
+
+.装备信息-描述 {
+  color: #8c8c8c;
+  padding: 1em 0;
+}
+
+.装备信息-词条 {
+  display: flex;
+  margin-bottom: 0.25em;
+  align-items: center;
+  background: #eee;
+  padding: 0.25em;
+
+  .图标 {
+    width: 1.5em;
+    height: 1.5em;
+    text-align: center;
+    color: #fff;
+    background: #000;
+    margin-right: 0.25em;
+  }
+
+  .值 {
+    font-weight: 600;
+    margin-left: auto;
+    text-align: left;
+    width: 2.5em;
+  }
+}
+
+.装备信息-套装 {
+  padding-top: 0.5em;
+  margin-top: 2em;
+  border-top: 1px solid #ddd;
+}

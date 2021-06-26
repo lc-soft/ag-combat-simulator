@@ -24,7 +24,9 @@ export default function 道具缩略图({ 数据 }) {
     <div className={classNames.join(' ')}>
       <div className="道具缩略图-背景" />
       <div className="道具缩略图-前景">
-        {图标}
+        <div className="道具缩略图-图标">
+          {图标}
+        </div>
         {星级}
       </div>
     </div>

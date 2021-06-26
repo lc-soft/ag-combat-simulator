@@ -11,6 +11,10 @@ html, body {
   line-height: 1.5;
 }
 
+.ml-1 {
+  margin-left: 0.5em;
+}
+
 .容器 {
   height: 100vh;
   display: flex;

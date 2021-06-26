@@ -1,0 +1,81 @@
+@mixin 词条样式($颜色) {
+  background: linear-gradient(to right, rgba($颜色, 0.5), transparent);
+
+  .图标 {
+    color: mix(#fff, $颜色, 50);
+  }
+}
+
+.道具 {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.道具:hover {
+  opacity: 0.8;
+}
+
+.道具缩略图.品质-1 {
+  .道具星级 {
+    border-color: #d6e4ff;
+    background-image: linear-gradient(to top, #1890ff 5%, 30%, transparent);
+  }
+}
+
+.道具缩略图.品质-2 .道具星级 {
+  border-color: #ffd6e7;
+  background-image: linear-gradient(to top, #c41d7f 5%, 30%, transparent);
+}
+
+.道具缩略图.品质-3 .道具星级 {
+  border-color: #fff1b8;
+  background-image: linear-gradient(to top, #d48806 5%, 30%, transparent);
+}
+
+.品质-1 .装备信息-名称 {
+  border-color: #1890ff;
+}
+
+.品质-1 .装备信息-头部 .道具缩略图-背景 {
+  background: rgb(24 144 255 / 50%);
+}
+
+.品质-2 .装备信息-名称 {
+  border-color: #c41d7f;
+}
+
+.品质-2 .装备信息-头部 .道具缩略图-背景 {
+  background: rgb(196 29 127 / 50%);
+}
+
+.品质-3 .装备信息-名称 {
+  border-color: #fadb14;
+}
+
+.品质-3 .装备信息-头部 .道具缩略图-背景 {
+  background: rgb(250 173 20 / 50%);
+}
+
+.品质-1,
+.品质-2,
+.品质-3 {
+  .装备信息-头部 .道具缩略图 {
+    color: #fff;
+  }
+}
+
+.装备信息-词条.品质-0 {
+  @include 词条样式(#52c41a);
+}
+
+.装备信息-词条.品质-1 {
+  @include 词条样式(#1890ff);
+}
+
+.装备信息-词条.品质-2 {
+  @include 词条样式(#f759ab);
+}
+
+.装备信息-词条.品质-3 {
+  @include 词条样式(#faad14);
+}
