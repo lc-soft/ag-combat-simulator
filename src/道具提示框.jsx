@@ -89,12 +89,16 @@ function 道具信息界面({ 道具 }) {
 }
 
 export default function 道具提示框() {
+  const 引用 = useRef();
   const 提示框引用 = useRef();
   const { 道具, 元素引用 } = useContext(道具数据上下文);
 
   useEffect(() => {
     if (道具 && 元素引用.current) {
-      createPopper(元素引用.current, 提示框引用.current);
+      if (引用.current) {
+        引用.current.destroy();
+      }
+      引用.current = createPopper(元素引用.current, 提示框引用.current);
     }
   }, [道具, 元素引用]);
 
