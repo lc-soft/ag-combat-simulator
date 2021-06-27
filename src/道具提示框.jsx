@@ -62,9 +62,12 @@ function 道具信息界面({ 道具 }) {
   }
   if (道具.已确认) {
     套装信息 = (
-      <div className="装备信息-套装">
-        <div>{道具.套装.名称}</div>
-        <div>{道具.套装.效果}</div>
+      <div className={`装备信息-套装 ${道具.套装.名称}`}>
+        <div className="图标" />
+        <div>
+          <div>{道具.套装.名称}</div>
+          <div>{道具.套装.效果}</div>
+        </div>
       </div>
     );
   } else {

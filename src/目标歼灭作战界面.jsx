@@ -14,10 +14,10 @@ import './目标歼灭作战界面.scss';
 function 作战任务展示({ 任务 }) {
   return (
     <div key={任务.标题} className="作战报酬组">
-      <div className="作战报酬组-标题">
-        {任务.标题}
+      <h4>
+        <span>{任务.标题}</span>
         <span className="ml-1">({任务.报酬列表.length})</span>
-      </div>
+      </h4>
       <道具列表 列表={任务.报酬列表} 按评分排序 />
     </div>
   );
@@ -28,7 +28,7 @@ const 缓存的作战任务展示 = memo(
   (prev, next) => prev.任务.标题 === next.任务.标题
 );
 
-function 作战结果界面({ 作战任务组, ...props }) {
+function 作战结果界面({ 作战任务组, 响应清空结果, ...props }) {
   const 总数 = useMemo(
     () => 作战任务组.reduce((上个总数, 任务) => 上个总数 + 任务.报酬列表.length, 0),
     [作战任务组]
@@ -37,8 +37,13 @@ function 作战结果界面({ 作战任务组, ...props }) {
     <div className="作战结果界面" {...props}>
       <h3>作战结果 <span className="ml-1">({总数})</span></h3>
       <Scrollbars className="作战报酬列表">
-        {作战任务组.map((任务) => <缓存的作战任务展示 key={任务.唯一标识} 任务={任务} />)}
+        <div className="内容区">
+          {作战任务组.map((任务) => <缓存的作战任务展示 key={任务.唯一标识} 任务={任务} />)}
+        </div>
       </Scrollbars>
+      <div className="操作栏">
+        <按钮 onClick={响应清空结果}>清空结果</按钮>
+      </div>
     </div>
   );
 }
@@ -95,7 +100,14 @@ export default function 目标歼灭作战界面() {
         ))}
       </div>
       <div className="目标展示区">
-        <作战结果界面 作战任务组={作战任务组} style={总作战次数 < 1 ? { display: 'none' } : undefined }/>
+        <作战结果界面
+          作战任务组={作战任务组}
+          style={总作战次数 < 1 ? { display: 'none' } : undefined }
+          响应清空结果={() => {
+            设置作战任务组([]);
+            设置总作战次数(0);
+          }}
+        />
       </div>
       <div className="目标信息面板">
         <h2 className="目标信息面板-标题 衬线字体">

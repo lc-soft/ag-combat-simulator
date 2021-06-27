@@ -1,6 +1,7 @@
 import './道具缩略图.scss';
 
 export default function 道具缩略图({ 数据 }) {
+  let 前景样式类;
   let 图标 = '未知';
   let 星级 = null;
   const classNames = ['道具缩略图'];
@@ -19,11 +20,14 @@ export default function 道具缩略图({ 数据 }) {
         ))}
       </div>
     );
+    if (数据.系列) {
+      前景样式类 = `${数据.系列}-${数据.星级}`;
+    }
   }
   return (
     <div className={classNames.join(' ')}>
       <div className="道具缩略图-背景" />
-      <div className="道具缩略图-前景">
+      <div className={`道具缩略图-前景 ${前景样式类}`}>
         <div className="道具缩略图-图标">
           {图标}
         </div>

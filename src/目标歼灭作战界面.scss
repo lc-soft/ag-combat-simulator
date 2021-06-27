@@ -150,16 +150,52 @@ $背景色: #101c30;
 }
 
 .作战结果界面 {
-  color: #fff;
   display: flex;
-  padding: 1em;
+  padding: 0.5em;
   flex-direction: column;
   background: rgba(0, 0, 0, 0.2);
   height: 100%;
-}
+  background: #e1e3e2;
 
-.作战结果界面 h3 {
-  margin-top: 0;
+  h3 {
+    margin: 0 0 0.5rem 0;
+  }
+
+  .内容区 {
+    padding: 0.5em;
+    background: #c9ccd1;
+  }
+
+  h4 {
+    color: #fff;
+    font-weight: normal;
+    font-size: 1rem;
+    background: #37444d;
+    margin: 0 0 1rem 0;
+    padding: 0.25em 0.75em;
+    border-left: 2px solid #0f84eb;
+    position: relative;
+
+    span {
+      position: relative;
+      z-index: 1;
+    }
+    &::before {
+      top: 0;
+      left: 0;
+      width: 5em;
+      height: 100%;
+      position: absolute;
+      content: "";
+      z-index: 0;
+      background-image: linear-gradient(to right, rgba(#0f84eb, 0.5), transparent);
+    }
+  }
+
+  .操作栏 {
+    padding: 1em 1em 0;
+    text-align: center;
+  }
 }
 
 .作战报酬列表 {

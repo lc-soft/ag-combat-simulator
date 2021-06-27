@@ -38,7 +38,7 @@ $品质颜色组_亮: #bae637, #40a9ff, #f759ab, #ffec3d;
 
     &.道具缩略图 .道具星级 {
       border-color: lighten($品质颜色, 30);
-      background-image: linear-gradient(to top, $品质颜色 5%, 30%, transparent);
+      background-image: linear-gradient(to top, rgba($品质颜色, 0.5) 5%, 30%, transparent);
     }
   }
 }

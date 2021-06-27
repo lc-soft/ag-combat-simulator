@@ -4,6 +4,7 @@
   position: relative;
   display: inline-block;
   cursor: pointer;
+  user-select: none;
 }
 
 .道具:hover {
