@@ -1,0 +1,15 @@
+.按钮 {
+  padding: 0.5em 1.5em;
+  background: #1890ff;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+}
+
+.按钮:hover {
+  background: #40a9ff;
+}
+
+.按钮:active {
+  background: #096dd9;
+}

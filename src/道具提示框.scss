@@ -2,6 +2,8 @@
   font-size: small;
   background: #fff;
   max-width: 15rem;
+  z-index: 10;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
 }
 
 .装备信息-头部 {
@@ -49,6 +51,12 @@
   align-items: center;
   background: #eee;
   padding: 0.25em;
+
+  &.主属性 {
+    padding: 0.5em 0.25em;
+    box-shadow: 0 0 0px 1px #ccc;
+    margin-bottom: 0.75em;
+  }
 
   .图标 {
     width: 1.5em;

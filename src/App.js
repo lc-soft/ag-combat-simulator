@@ -8,7 +8,7 @@ import 目标歼灭界面 from './目标歼灭界面';
 import 目标歼灭作战界面 from './目标歼灭作战界面';
 import 道具提示框上下文提供者 from './道具提示框上下文提供者';
 
-import './App.css';
+import './App.scss';
 
 function 主界面() {
   return (

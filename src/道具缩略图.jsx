@@ -1,4 +1,4 @@
-import './道具缩略图.css';
+import './道具缩略图.scss';
 
 export default function 道具缩略图({ 数据 }) {
   let 图标 = '未知';

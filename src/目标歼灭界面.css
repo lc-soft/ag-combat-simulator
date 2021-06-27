@@ -16,12 +16,11 @@
   flex: auto;
   display: flex;
   flex-direction: column;
-  max-width: 200px;
+  max-width: 260px;
   background: #fff;
-  height: 300px;
   margin: 0.5rem;
   text-align: center;
-  box-shadow: 0 0 16px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
   cursor: pointer;
   transition: all 0.2s;
   color: inherit;
@@ -49,7 +48,9 @@
 }
 
 .目标-图片 {
-  flex: auto;
+  flex: none;
+  height: 340px;
+  background-position: center -40px;
 }
 
 .目标-名称 {
@@ -57,6 +58,7 @@
   font-size: 1.25rem;
   font-weight: bold;
   padding: 0.5rem;
+  background-color: #fcfcfc;
 }
 
 .目标-名称::before {
@@ -69,7 +71,7 @@
 
 .目标-名称::before,
 .目标-名称::after {
-  color: #612500;
+  color: #b1856a;
   opacity: 0.2;
   margin: 0 0.25em;
 }
@@ -78,7 +80,7 @@
   color: #fff;
   font-size: small;
   padding: 0.5rem 1rem;
-  background: #002329;
+  background: #424c59;
 }
 
 .目标-套装-内部 {

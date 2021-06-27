@@ -1,3 +1,4 @@
+$背景色: #101c30;
 
 .目标歼灭作战界面 {
   height: 100%;
@@ -5,7 +6,7 @@
   display: flex;
   align-items: center;
   padding: 1rem 0;
-  background: rgba(0, 0, 0, 0.2);
+  background-image: linear-gradient(to right, $背景色, transparent, $背景色);
 }
 
 .目标阶段-列表 {
@@ -38,7 +39,7 @@
   width: 4px;
   height: 100%;
   position: absolute;
-  content: '';
+  content: "";
   background-image: linear-gradient(to right, rgba(9, 109, 217, 0.4), rgba(9, 109, 217, 0));
 }
 

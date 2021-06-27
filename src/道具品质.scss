@@ -1,0 +1,44 @@
+@use "sass:list";
+
+$品质颜色组: #52c41a, #1890ff, #eb2f96, #faad14;
+$品质颜色组_亮: #bae637, #40a9ff, #f759ab, #ffec3d;
+
+@mixin 词条样式($颜色) {
+  background: linear-gradient(to right, rgba($颜色, 0.5), transparent);
+
+  .图标 {
+    color: mix(#fff, $颜色, 50);
+  }
+}
+
+@for $品质 from 0 through 3 {
+  $品质颜色: list.nth($品质颜色组, $品质 + 1);
+  $品质颜色_亮: list.nth($品质颜色组_亮, $品质 + 1);
+
+  .装备信息-词条.品质-#{$品质} {
+    @include 词条样式($品质颜色);
+  }
+
+  .装备副属性缩略图 .品质-#{$品质} {
+    color: lighten($品质颜色_亮, 10);
+  }
+
+  .品质-#{$品质} {
+    .装备信息-名称 {
+      border-color: $品质颜色;
+    }
+
+    .装备信息-头部 .道具缩略图 {
+      color: #fff;
+
+      &-背景 {
+        background: mix($品质颜色, #000, 20);
+      }
+    }
+
+    &.道具缩略图 .道具星级 {
+      border-color: lighten($品质颜色, 30);
+      background-image: linear-gradient(to top, $品质颜色 5%, 30%, transparent);
+    }
+  }
+}

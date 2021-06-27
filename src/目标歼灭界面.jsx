@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import { Link } from "react-router-dom";
 import 目标歼灭 from './lib/目标歼灭';
 import './目标歼灭界面.css';
@@ -9,7 +10,7 @@ export default function 目标歼灭界面() {
         {目标歼灭.map((目标) => (
           <Link
             key={目标.名称}
-            className="目标"
+            className={classNames('目标', 目标.名称)}
             to={`/作战/${目标.名称}`}
           >
             <div className="目标-图片" style={{ backgroundColor: 目标.颜色 }}></div>

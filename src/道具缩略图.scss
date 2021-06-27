@@ -19,9 +19,10 @@
   bottom: 0;
   content: '';
   position: absolute;
-  border: 2em solid rgba(0, 0, 0, 0.05);
+  border: 2em solid rgba(94, 30, 30, 0.08);
   border-top-color: transparent;
   border-right-color: transparent;
+  transform: rotate(-20deg);
 }
 
 .道具缩略图-背景::after {
@@ -29,9 +30,10 @@
   bottom: 0;
   content: '';
   position: absolute;
-  border: 2em solid rgba(0, 0, 0, 0.05);
+  border: 2em solid rgba(0, 0, 0, 0.08);
   border-top-color: transparent;
   border-left-color: transparent;
+  transform: rotate(20deg);
 }
 
 .道具缩略图-前景 {
@@ -60,9 +62,21 @@
   left: 0;
   right: 0;
   display: flex;
-  justify-content: center;
+  align-items: center;
   position: absolute;
   border-bottom: 1px solid #eee;
+  padding: 0 1px;
+
+  &::before {
+    content: '[';
+    opacity: 0.2;
+    margin-right: auto;
+  }
+  &::after {
+    content: ']';
+    opacity: 0.2;
+    margin-left: auto;
+  }
 }
 
 .道具星级 .星星 {

@@ -1,5 +1,6 @@
 import 生成随机数 from 'lodash/random';
 import 生成唯一标识 from 'lodash/uniqueId';
+import classNames from 'classnames';
 import { useMemo, useState, memo } from 'react';
 import { useParams } from 'react-router-dom';
 import { Scrollbars } from 'react-custom-scrollbars';
@@ -8,7 +9,7 @@ import 道具列表 from './道具列表';
 import 目标歼灭 from './lib/目标歼灭';
 import { 创建未确认装备, 确认装备属性 } from "./lib/装备库";
 
-import './目标歼灭作战界面.css';
+import './目标歼灭作战界面.scss';
 
 function 作战任务展示({ 任务 }) {
   return (
@@ -79,13 +80,13 @@ export default function 目标歼灭作战界面() {
   };
 
   return (
-    <div className="界面 目标歼灭作战界面">
+    <div className={classNames('界面', '目标歼灭作战界面', 目标名)}>
       <div className="目标阶段-列表">
         {目标信息.阶段组.map((_阶段信息, 序号) => (
           <button
             key={序号}
             type="button"
-            className={`目标阶段-选项${已选中序号 === 序号 ? ' 已选中' : ''}`}
+            className={classNames('目标阶段-选项', 已选中序号 === 序号 && '已选中')}
             onClick={() => 设置已选中序号(序号)}
           >
             第{数字[序号]}阶段
