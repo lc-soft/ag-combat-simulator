@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import { Link } from "react-router-dom";
-import 目标歼灭 from './lib/目标歼灭';
+import 目标歼灭 from './基础库/目标歼灭';
 import './目标歼灭界面.css';
 
 export default function 目标歼灭界面() {

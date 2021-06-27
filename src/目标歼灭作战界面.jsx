@@ -6,8 +6,8 @@ import { useParams } from 'react-router-dom';
 import { Scrollbars } from 'react-custom-scrollbars';
 import 按钮 from './按钮';
 import 道具列表 from './道具列表';
-import 目标歼灭 from './lib/目标歼灭';
-import { 创建未确认装备, 确认装备属性 } from "./lib/装备库";
+import 目标歼灭 from './基础库/目标歼灭';
+import { 创建未确认装备, 确认装备属性 } from "./基础库/装备库";
 
 import './目标歼灭作战界面.scss';
 
