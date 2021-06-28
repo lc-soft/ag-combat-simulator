@@ -6,7 +6,7 @@ $品质颜色组_亮: #bae637, #40a9ff, #f759ab, #ffec3d;
 @mixin 词条样式($颜色) {
   background: linear-gradient(to right, rgba($颜色, 0.5), transparent);
 
-  .图标 {
+  .属性图标 {
     color: mix(#fff, $颜色, 50);
   }
 }

@@ -13,7 +13,7 @@ export default function 道具({ 数据 }) {
     额外信息 = (
       <div className="装备副属性缩略图">
         {数据.副属性组.map(({ 名称, 品质 }) => (
-          <属性图标 key={名称} className={`品质-${品质}`} 名称={名称} />
+          <属性图标 key={名称} className={`品质-${品质} 透明`} 名称={名称} />
         ))}
       </div>
     );

@@ -14,7 +14,9 @@
 .装备副属性缩略图 {
   font-size: 12px;
   background: rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
+  border-radius: 3px;
+  overflow: hidden;
+  display: flex;
 
   span {
     width: 1rem;

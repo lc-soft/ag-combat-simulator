@@ -1,7 +1,7 @@
 .道具提示框 {
   font-size: small;
   background: #fff;
-  max-width: 15rem;
+  max-width: 16rem;
   z-index: 10;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
 }
@@ -58,12 +58,7 @@
     margin-bottom: 0.75em;
   }
 
-  .图标 {
-    width: 1.5em;
-    height: 1.5em;
-    text-align: center;
-    color: #fff;
-    background: #000;
+  .属性图标 {
     margin-right: 0.25em;
   }
 
@@ -77,6 +72,6 @@
 
 .装备信息-套装 {
   padding-top: 0.5em;
-  margin-top: 2em;
+  margin-top: 1em;
   border-top: 1px solid #ddd;
 }
