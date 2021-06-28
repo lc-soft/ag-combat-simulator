@@ -95,6 +95,17 @@ $背景色: #101c30;
 .目标展示区 {
   flex: auto;
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  .提示 {
+    color: #fff;
+    padding: 1rem 2rem;
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 2px 8px rgba(#000, 0.5);
+  }
 }
 
 .目标信息面板 {
@@ -150,12 +161,17 @@ $背景色: #101c30;
 }
 
 .作战结果界面 {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
   display: flex;
   padding: 0.5em;
   flex-direction: column;
-  background: rgba(0, 0, 0, 0.2);
-  height: 100%;
   background: #e1e3e2;
+  position: absolute;
+  box-shadow: 0 0 8px rgba(#000, 0.6);
 
   h3 {
     margin: 0 0 0.5rem 0;

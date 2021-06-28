@@ -100,6 +100,7 @@ export default function 目标歼灭作战界面() {
         ))}
       </div>
       <div className="目标展示区">
+        <span className="提示">暂无 BOSS 画面</span>
         <作战结果界面
           作战任务组={作战任务组}
           style={总作战次数 < 1 ? { display: 'none' } : undefined }
