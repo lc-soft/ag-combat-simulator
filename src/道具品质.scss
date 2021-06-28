@@ -20,7 +20,8 @@ $品质颜色组_亮: #bae637, #40a9ff, #f759ab, #ffec3d;
   }
 
   .装备副属性缩略图 .品质-#{$品质} {
-    color: lighten($品质颜色_亮, 10);
+    background-color: rgba($品质颜色, 0.8);
+    color: #fff;
   }
 
   .品质-#{$品质} {
