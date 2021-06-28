@@ -1,6 +1,6 @@
-import { useContext, useEffect, useRef } from 'react';
+import { useState, useContext } from 'react';
 import classNames from 'classnames';
-import { createPopper } from '@popperjs/core';
+import { usePopper } from 'react-popper';
 import { 道具数据上下文 } from './道具提示框上下文';
 import 道具缩略图 from './道具缩略图';
 import 属性图标 from './属性图标';
@@ -102,27 +102,17 @@ function 道具信息界面({ 道具 }) {
 }
 
 export default function 道具提示框() {
-  const 引用 = useRef();
-  const 提示框引用 = useRef();
+  const [提示框元素, 设置提示框元素] = useState(null);
   const { 道具, 元素引用 } = useContext(道具数据上下文);
-
-  useEffect(() => {
-    if (道具 && 元素引用.current) {
-      引用.current = createPopper(元素引用.current, 提示框引用.current);
-    }
-    return () => {
-      if (引用.current) {
-        引用.current.destroy();
-      }
-    }
-  }, [道具, 元素引用]);
+  const { styles, attributes } = usePopper(元素引用.current, 提示框元素);
 
   return (
     <div
-      ref={提示框引用}
+      ref={设置提示框元素}
       className="道具提示框"
-      stlye={!道具 ? { display: 'none' } : undefined }
+      style={{ ...styles.popper, ...(!道具 ? { display: 'none' } : {}) }}
       onClick={(e) => e.stopPropagation()}
+      {...attributes.popper}
     >
       <道具信息界面 道具={道具} />
     </div>
