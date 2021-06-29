@@ -1,0 +1,21 @@
+.目标画面 {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  pointer-events: none;
+  position: absolute;
+  overflow: hidden;
+
+  .提示 {
+    top: 50%;
+    left: 50%;
+    color: #fff;
+    padding: 1rem 2rem;
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 2px 8px rgba(#000, 0.5);
+    position: absolute;
+    transform: translate(-50%, -50%);
+  }
+}

@@ -7,6 +7,7 @@ import { Scrollbars } from 'react-custom-scrollbars';
 import 按钮 from './按钮';
 import 道具列表 from './道具列表';
 import 目标歼灭 from './基础库/目标歼灭';
+import 目标画面 from './目标画面';
 import { 创建未确认装备, 确认装备属性 } from "./基础库/装备库";
 
 import './目标歼灭作战界面.scss';
@@ -86,6 +87,7 @@ export default function 目标歼灭作战界面() {
 
   return (
     <div className={classNames('界面', '目标歼灭作战界面', 目标名)}>
+      <目标画面 目标名={目标名} />
       <div className="目标阶段-列表">
         {目标信息.阶段组.map((_阶段信息, 序号) => (
           <button
@@ -100,7 +102,6 @@ export default function 目标歼灭作战界面() {
         ))}
       </div>
       <div className="目标展示区">
-        <span className="提示">暂无 BOSS 画面</span>
         <作战结果界面
           作战任务组={作战任务组}
           style={总作战次数 < 1 ? { display: 'none' } : undefined }
