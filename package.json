@@ -43,5 +43,18 @@
   },
   "devDependencies": {
     "sass": "^1.35.1"
-  }
+  },
+  "description": "一个用于模拟某手游装备副本的装备掉落情况的网页端模拟器。",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@gitee.com:lc-soft/ag-combat-sumulator.git"
+  },
+  "keywords": [
+    "react",
+    "game",
+    "website"
+  ],
+  "author": "Liu <lc-soft@live.cn>",
+  "license": "AGPL-3.0-or-later"
 }
