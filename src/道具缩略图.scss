@@ -67,42 +67,45 @@
   left: 0;
   right: 0;
   position: absolute;
+  display: flex;
   border-bottom: 1px solid #eee;
   padding: 0 1px;
 
   &::before {
+    color: rgba(#fff, 0.3);
     content: '[';
-    opacity: 0.2;
+    margin-left: 1px;
     margin-right: auto;
   }
   &::after {
+    color: rgba(#fff, 0.3);
     content: ']';
-    opacity: 0.2;
     margin-left: auto;
-  }
-}
-
-.道具星级 .星星 {
-  font-size: small;
-  margin-right: -2px;
-  display: inline-block;
-  color: transparent;
-
-  &:last-child {
-    margin: 0;
+    margin-right: 1px;
   }
 
-  &.紫色 {
-    color: #ffadd2;
-  }
+  .星星 {
+    font-size: small;
+    margin-right: -2px;
+    display: inline-block;
+    color: transparent;
 
-  &.金色 {
-    color: #ffec3d;
-  }
+    &:last-child {
+      margin: 0;
+    }
 
-  &::before {
-    content: '★';
-    display: flex;
-    transform: rotate(15deg);
+    &.紫色 {
+      color: #ffadd2;
+    }
+
+    &.金色 {
+      color: #ffec3d;
+    }
+
+    &::before {
+      content: '★';
+      display: flex;
+      transform: rotate(15deg);
+    }
   }
 }
