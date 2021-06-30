@@ -4,10 +4,19 @@ $品质颜色组: #52c41a, #1890ff, #eb2f96, #faad14;
 $品质颜色组_亮: #bae637, #40a9ff, #f759ab, #ffec3d;
 
 @mixin 词条样式($颜色) {
-  background: linear-gradient(to right, rgba($颜色, 0.5), transparent);
+  background: linear-gradient(135deg, $颜色, rgba($颜色, 0.4) 50px, rgba($颜色, 0.1), transparent);
 
   .属性图标 {
+    position: relative;
     color: mix(#fff, $颜色, 50);
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      box-shadow: 0 0 6px 3px $颜色;
+    }
   }
 }
 
