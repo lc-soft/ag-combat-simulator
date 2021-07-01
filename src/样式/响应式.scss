@@ -1,0 +1,52 @@
+@media screen and (max-width: 800px) {
+  .容器 {
+    display: block;
+  }
+
+  .界面 {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    overflow: auto;
+    max-height: initial;
+  }
+
+  .目标列表 {
+    width: 3 * 200px + 4 * 16px;
+    justify-content: flex-start;
+  }
+
+  .目标歼灭作战界面 {
+    height: initial;
+    align-items: flex-start;
+    min-height: 100vh;
+  }
+
+  .目标展示区 {
+    order: 4;
+    height: auto;
+    flex-basis: 100%;
+    display: block;
+  }
+
+  .目标阶段-列表 {
+    padding-right: 1.5em;
+    overflow: visible;
+  }
+
+  .目标信息面板 {
+    height: 30em;
+    width: auto;
+    flex: 1;
+  }
+
+  .目标画面 {
+    display: none;
+  }
+
+  .作战结果界面 {
+    height: 60vh;
+    margin-top: 1em;
+    min-height: 400px;
+    position: static;
+  }
+}

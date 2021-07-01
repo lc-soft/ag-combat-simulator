@@ -147,12 +147,17 @@ $背景色: #101c30;
 .目标信息面板-操作 {
   margin-top: auto;
   text-align: right;
+  padding-top: 0.25em;
 }
 
 .目标信息面板-操作 .按钮 {
-  margin-top: 0.25em;
+  margin: 0 0 0.25em 0.25em;
   width: 100%;
   max-width: 10em;
+
+  &:first-child {
+    margin-left: 0;
+  }
 }
 
 .作战结果界面 {

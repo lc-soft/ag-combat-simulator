@@ -67,7 +67,6 @@
   left: 0;
   right: 0;
   position: absolute;
-  display: flex;
   border-bottom: 1px solid #eee;
   padding: 0 1px;
 
@@ -91,7 +90,7 @@
     color: transparent;
 
     &:last-child {
-      margin: 0;
+      margin-right: 0;
     }
 
     &.紫色 {
