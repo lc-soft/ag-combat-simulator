@@ -142,6 +142,10 @@ $背景色: #101c30;
 
 .目标信息面板-报酬列表 {
   flex: auto;
+
+  .道具缩略图 {
+    border-color: rgba(#fff, 0.2);
+  }
 }
 
 .目标信息面板-操作 {
@@ -215,5 +219,6 @@ $背景色: #101c30;
 
 .作战报酬列表 {
   flex: auto;
+  border-radius: 0.5em;
   background: #c9ccd1;
 }

@@ -1,8 +1,8 @@
 .道具缩略图 {
   width: 4em;
   height: 4em;
-  padding: 1px;
-  border: 1px solid rgba(180, 180, 180, 0.5);
+  padding: 2px;
+  border: 1px solid rgba(#000, 0.25);
   display: inline-block;
   position: relative;
 }
@@ -13,28 +13,29 @@
   overflow: hidden;
   position: relative;
   background-color: rgba(0, 0, 0, 0.1);
+  background-size: 5rem 5rem;
+  background-position: center;
 }
 
 .道具缩略图-背景::before {
-  left: 0;
-  bottom: 0;
-  content: '';
-  position: absolute;
-  border: 2em solid rgba(0, 0, 0, 0.1);
-  border-top-color: transparent;
-  border-right-color: transparent;
-  transform: rotate(-20deg);
+  left: -0.5em;
+  bottom: -1em;
+  transform: rotate(-25deg);
 }
 
 .道具缩略图-背景::after {
-  right: 0;
-  bottom: 0;
+  right: -0.5em;
+  bottom: -1em;
+  transform: rotate(25deg);
+}
+
+.道具缩略图-背景::before,
+.道具缩略图-背景::after {
   content: '';
   position: absolute;
-  border: 2em solid rgba(0, 0, 0, 0.1);
-  border-top-color: transparent;
-  border-left-color: transparent;
-  transform: rotate(20deg);
+  width: 6em;
+  height: 3em;
+  background: rgba(#000, 0.1);
 }
 
 .道具缩略图-前景 {
@@ -66,19 +67,30 @@
   bottom: 0;
   left: 0;
   right: 0;
+  line-height: 1rem;
   position: absolute;
-  border-bottom: 1px solid #eee;
-  padding: 0 1px;
+  padding: 0 2px;
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-bottom: 2px solid #eee;
+
+  &::before,
+  &::after {
+    content: "";
+    width: 2px;
+    height: 8px;
+    border: 1px solid rgba(#fff, 0.2);
+  }
 
   &::before {
-    color: rgba(#fff, 0.3);
-    content: '[';
+    border-right: 0;
     margin-left: 1px;
     margin-right: auto;
   }
+
   &::after {
-    color: rgba(#fff, 0.3);
-    content: ']';
+    border-left: 0;
     margin-left: auto;
     margin-right: 1px;
   }

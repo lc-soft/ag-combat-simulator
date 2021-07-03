@@ -13,6 +13,7 @@ export default function 道具缩略图({ 数据 }) {
     classNames.push(`品质-${数据.品质}`);
   }
   if (typeof 数据.星级 === 'number') {
+    classNames.push(`星级-${数据.星级}`);
     星级 = (
       <div className="道具星级">
         {new Array(Math.min(数据.星级, 5)).fill(0).map((_, 序号) => (
