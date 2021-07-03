@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/ag-combat-simulator/static/css/main.d47f026e.chunk.css",
-    "main.js": "/ag-combat-simulator/static/js/main.805fe063.chunk.js",
-    "main.js.map": "/ag-combat-simulator/static/js/main.805fe063.chunk.js.map",
+    "main.css": "/ag-combat-simulator/static/css/main.fd5ffe69.chunk.css",
+    "main.js": "/ag-combat-simulator/static/js/main.c89b7ecf.chunk.js",
+    "main.js.map": "/ag-combat-simulator/static/js/main.c89b7ecf.chunk.js.map",
     "runtime-main.js": "/ag-combat-simulator/static/js/runtime-main.f2f68645.js",
     "runtime-main.js.map": "/ag-combat-simulator/static/js/runtime-main.f2f68645.js.map",
     "static/js/2.999e65a7.chunk.js": "/ag-combat-simulator/static/js/2.999e65a7.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.026298c3.chunk.js": "/ag-combat-simulator/static/js/3.026298c3.chunk.js",
     "static/js/3.026298c3.chunk.js.map": "/ag-combat-simulator/static/js/3.026298c3.chunk.js.map",
     "index.html": "/ag-combat-simulator/index.html",
-    "static/css/main.d47f026e.chunk.css.map": "/ag-combat-simulator/static/css/main.d47f026e.chunk.css.map",
+    "static/css/main.fd5ffe69.chunk.css.map": "/ag-combat-simulator/static/css/main.fd5ffe69.chunk.css.map",
     "static/js/2.999e65a7.chunk.js.LICENSE.txt": "/ag-combat-simulator/static/js/2.999e65a7.chunk.js.LICENSE.txt",
     "static/media/主界面.scss": "/ag-combat-simulator/static/media/bg.ed15d72b.jpg",
     "static/media/index.scss": "/ag-combat-simulator/static/media/pic_tf_l_tlj.bf2a1848.png",
@@ -21,7 +21,7 @@
   "entrypoints": [
     "static/js/runtime-main.f2f68645.js",
     "static/js/2.999e65a7.chunk.js",
-    "static/css/main.d47f026e.chunk.css",
-    "static/js/main.805fe063.chunk.js"
+    "static/css/main.fd5ffe69.chunk.css",
+    "static/js/main.c89b7ecf.chunk.js"
   ]
 }
