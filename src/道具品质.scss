@@ -1,6 +1,6 @@
 @use "sass:list";
 
-$词条颜色组: #52c41a, #1890ff, #eb2f96, #ffcb00;
+$词条颜色组: #52c41a, #8bc8fe, #d8adfd, #ffcb00;
 $品质颜色组: #52c41a, #1890ff, #820a93, #a95511;
 $品质颜色组_亮: #bae637, #40a9ff, #f759ab, #ffec3d;
 
@@ -28,9 +28,12 @@ $品质颜色组_亮: #bae637, #40a9ff, #f759ab, #ffec3d;
     &::after {
       content: "";
       position: absolute;
-      left: 50%;
-      top: 50%;
-      box-shadow: 0 0 6px 4px rgba($颜色, 0.8);
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      background-color: $颜色;
+      mix-blend-mode: multiply;
     }
   }
 }
@@ -45,7 +48,7 @@ $品质颜色组_亮: #bae637, #40a9ff, #f759ab, #ffec3d;
   }
 
   .装备副属性缩略图 .品质-#{$品质} {
-    background-color: rgba($词条颜色, 0.8);
+    background-color: $词条颜色;
     color: #fff;
   }
 
